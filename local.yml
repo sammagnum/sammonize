@@ -58,3 +58,8 @@
         - zoxide
         - zsh
         - zsh-vi-mode
+
+  - name: Clone my dotfiles
+    git:
+      repo: https://github.com/sammagnum/.dotfiles 
+      dest: ~/dotfiles
