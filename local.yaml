@@ -1,0 +1,51 @@
+- hosts: all
+  tags: always
+  pre_tasks:
+    - name: pre-run | update package cache (arch)
+      tags: always
+      pacman: update_cache=yes
+      changed_when: False
+      when: ansible_distribution == "Archlinux"
+
+    - name: pre-run | update package cache (macos)
+      tags: always
+      homebrew: update_homebrew=yes
+      changed_when: False
+      when: ansible_distribution == "MacOSX"
+        
+- hosts: all
+  tasks:
+  - name: Install packages
+    package: 
+      state:  latest
+      name:
+        - python
+        - bash
+        - bash-completion
+        - bat
+        - coreutils
+        - curl
+        - dos2unix
+        - exa
+        - findutils
+        - fish
+        - fzf
+        - gawk
+        - gh
+        - git
+        - jq
+        - lsd
+        - neofetch
+        - neovim
+        - nmap
+        - rbenv
+        - rustup-init
+        - stow
+        - telnet
+        - tldr
+        - tmux
+        - vim
+        - wget
+        - zoxide
+        - zsh
+        - zsh-vi-mode
