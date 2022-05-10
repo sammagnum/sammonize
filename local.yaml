@@ -1,4 +1,4 @@
-- hosts: all
+- hosts: localhost
   tags: always
   pre_tasks:
     - name: pre-run | update package cache (arch)
