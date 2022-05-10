@@ -7,6 +7,13 @@
       pacman: update_cache=yes
       changed_when: False
       when: ansible_distribution == "Archlinux"
+      
+    - name: pre-run | install homebrew if not installed (homebrew) 
+      tags: always
+      shell: command -v brew || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+      changed_when: False
+      when: ansible_distribution == "MacOSX"
+        
 
     - name: pre-run | update package cache (macos)
       tags: always
@@ -15,7 +22,7 @@
       when: ansible_distribution == "MacOSX"
         
 - hosts: localhost
-  connection: locala
+  connection: local
   tasks:
   - name: Install packages
     package: 
