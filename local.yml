@@ -62,13 +62,13 @@
   - name: Clone my dotfiles
     git:
       repo: https://github.com/sammagnum/.dotfiles 
-      dest: ~/dotfiles
+      dest: $HOME/.dotfiles
       
   - name: stow my dotfiles
     stow:
       state: latest
       package: '{{ item }}'
-      dir: /media/user/dots
+      dir: $HOME/.dotfiles
     with_items:
     - nvim
     - starship
