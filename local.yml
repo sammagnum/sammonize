@@ -61,7 +61,7 @@
 
   - name: Clone my dotfiles
     git:
-      repo: https://github.com/sammagnum/.dotfiles 
+      repo: git@github.com:sammagnum/.dotfiles.git
       dest: $HOME/.dotfiles
       
   - name: stow my dotfiles
