@@ -63,3 +63,15 @@
     git:
       repo: https://github.com/sammagnum/.dotfiles 
       dest: ~/dotfiles
+      
+  - name: stow my dotfiles
+    stow:
+      state: latest
+      package: '{{ item }}'
+      dir: /media/user/dots
+    with_items:
+    - nvim
+    - starship
+    - tmux
+    - vim
+    - zsh
