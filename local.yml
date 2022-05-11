@@ -35,7 +35,7 @@
         - coreutils
         - curl
         - dos2unix
-        - exa
+        - fd
         - findutils
         - fish
         - fzf
