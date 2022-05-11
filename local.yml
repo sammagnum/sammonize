@@ -26,6 +26,8 @@
   tasks:
   - name: Install packages
     package: 
+      async: 1800
+      poll: 0
       state:  latest
       name:
         - python
