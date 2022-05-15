@@ -383,7 +383,7 @@
     git:
       repo: https://github.com/jeffreytse/zsh-vi-mode.git
       dest: $HOME/.opt
-      when: ansible_distribution == "Fedora"
+    when: ansible_distribution == "Fedora"
         
   - name: Clone my dotfiles
     git:
