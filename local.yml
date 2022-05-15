@@ -6,6 +6,12 @@
       tags: always
       pacman: update_cache=yes
       changed_when: False
+      when: ansible_distribution == "Fedora"
+      
+    - name: pre-run | update package cache (arch)
+      tags: always
+      pacman: update_cache=yes
+      changed_when: False
       when: ansible_distribution == "Archlinux"
       
     - name: pre-run | install homebrew if not installed (homebrew) 
@@ -25,6 +31,7 @@
   connection: local
   tasks:
   - name: Install packages
+    ignore_errors: yes
     package: 
       state:  latest
       name:
@@ -32,6 +39,7 @@
         - bash
         - bash-completion
         - bat
+        - cargo
         - coreutils
         - curl
         - dos2unix
@@ -48,6 +56,7 @@
         - neovim
         - nmap
         - rbenv
+        - rust
         - rustup-init
         - stow
         - telnet
@@ -59,6 +68,12 @@
         - zsh
         - zsh-vi-mode
 
+  - name: Install zsh-vi-mode
+    git:
+      repo: https://github.com/jeffreytse/zsh-vi-mode.git
+      dest: $HOME/.opt
+      when: ansible_distribution == "Fedora"
+        
   - name: Clone my dotfiles
     git:
       repo: git@github.com:sammagnum/.dotfiles.git
