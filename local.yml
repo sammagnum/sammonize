@@ -2,7 +2,7 @@
   connection: local
   tags: always
   pre_tasks:
-    - name: pre-run | update package cache (arch)
+    - name: pre-run | update package cache (fedora)
       tags: always
       pacman: update_cache=yes
       changed_when: False
@@ -32,6 +32,7 @@
   tasks:
   - name: Install packages
     ignore_errors: yes
+    become: yes
     package: 
       state:  latest
       name:
