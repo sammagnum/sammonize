@@ -30,43 +30,353 @@
 - hosts: localhost
   connection: local
   tasks:
-  - name: Install packages
+  - name: Install python
     ignore_errors: yes
     become: yes
     package: 
       state:  latest
       name:
         - python
+
+- hosts: localhost
+  connection: local
+  tasks:
+  - name: Install bash
+    ignore_errors: yes
+    become: yes
+    package: 
+      state:  latest
+      name:
         - bash
+
+- hosts: localhost
+  connection: local
+  tasks:
+  - name: Install bash-completion
+    ignore_errors: yes
+    become: yes
+    package: 
+      state:  latest
+      name:
         - bash-completion
+
+- hosts: localhost
+  connection: local
+  tasks:
+  - name: Install bat
+    ignore_errors: yes
+    become: yes
+    package: 
+      state:  latest
+      name:
         - bat
+
+- hosts: localhost
+  connection: local
+  tasks:
+  - name: Install cargo
+    ignore_errors: yes
+    become: yes
+    package: 
+      state:  latest
+      name:
         - cargo
+
+- hosts: localhost
+  connection: local
+  tasks:
+  - name: Install coreutils
+    ignore_errors: yes
+    become: yes
+    package: 
+      state:  latest
+      name:
         - coreutils
+
+- hosts: localhost
+  connection: local
+  tasks:
+  - name: Install curl
+    ignore_errors: yes
+    become: yes
+    package: 
+      state:  latest
+      name:
         - curl
+
+- hosts: localhost
+  connection: local
+  tasks:
+  - name: Install dos2unix
+    ignore_errors: yes
+    become: yes
+    package: 
+      state:  latest
+      name:
         - dos2unix
+
+- hosts: localhost
+  connection: local
+  tasks:
+  - name: Install fd
+    ignore_errors: yes
+    become: yes
+    package: 
+      state:  latest
+      name:
         - fd
+
+- hosts: localhost
+  connection: local
+  tasks:
+  - name: Install findutils
+    ignore_errors: yes
+    become: yes
+    package: 
+      state:  latest
+      name:
         - findutils
+
+- hosts: localhost
+  connection: local
+  tasks:
+  - name: Install fish
+    ignore_errors: yes
+    become: yes
+    package: 
+      state:  latest
+      name:
         - fish
+
+- hosts: localhost
+  connection: local
+  tasks:
+  - name: Install fzf
+    ignore_errors: yes
+    become: yes
+    package: 
+      state:  latest
+      name:
         - fzf
+
+- hosts: localhost
+  connection: local
+  tasks:
+  - name: Install gawk
+    ignore_errors: yes
+    become: yes
+    package: 
+      state:  latest
+      name:
         - gawk
+
+- hosts: localhost
+  connection: local
+  tasks:
+  - name: Install gh
+    ignore_errors: yes
+    become: yes
+    package: 
+      state:  latest
+      name:
         - gh
+
+- hosts: localhost
+  connection: local
+  tasks:
+  - name: Install git
+    ignore_errors: yes
+    become: yes
+    package: 
+      state:  latest
+      name:
         - git
+
+- hosts: localhost
+  connection: local
+  tasks:
+  - name: Install jq
+    ignore_errors: yes
+    become: yes
+    package: 
+      state:  latest
+      name:
         - jq
+
+- hosts: localhost
+  connection: local
+  tasks:
+  - name: Install lsd
+    ignore_errors: yes
+    become: yes
+    package: 
+      state:  latest
+      name:
         - lsd
+
+- hosts: localhost
+  connection: local
+  tasks:
+  - name: Install neofetch
+    ignore_errors: yes
+    become: yes
+    package: 
+      state:  latest
+      name:
         - neofetch
+
+- hosts: localhost
+  connection: local
+  tasks:
+  - name: Install neovim
+    ignore_errors: yes
+    become: yes
+    package: 
+      state:  latest
+      name:
         - neovim
+
+- hosts: localhost
+  connection: local
+  tasks:
+  - name: Install nmap
+    ignore_errors: yes
+    become: yes
+    package: 
+      state:  latest
+      name:
         - nmap
+
+- hosts: localhost
+  connection: local
+  tasks:
+  - name: Install rbenv
+    ignore_errors: yes
+    become: yes
+    package: 
+      state:  latest
+      name:
         - rbenv
+
+- hosts: localhost
+  connection: local
+  tasks:
+  - name: Install rust
+    ignore_errors: yes
+    become: yes
+    package: 
+      state:  latest
+      name:
         - rust
+
+- hosts: localhost
+  connection: local
+  tasks:
+  - name: Install init
+    ignore_errors: yes
+    become: yes
+    package: 
+      state:  latest
+      name:
         - rustup-init
+
+- hosts: localhost
+  connection: local
+  tasks:
+  - name: Install stow
+    ignore_errors: yes
+    become: yes
+    package: 
+      state:  latest
+      name:
         - stow
+
+- hosts: localhost
+  connection: local
+  tasks:
+  - name: Install telnet
+    ignore_errors: yes
+    become: yes
+    package: 
+      state:  latest
+      name:
         - telnet
+
+- hosts: localhost
+  connection: local
+  tasks:
+  - name: Install tldr
+    ignore_errors: yes
+    become: yes
+    package: 
+      state:  latest
+      name:
         - tldr
+
+- hosts: localhost
+  connection: local
+  tasks:
+  - name: Install tmux
+    ignore_errors: yes
+    become: yes
+    package: 
+      state:  latest
+      name:
         - tmux
+
+- hosts: localhost
+  connection: local
+  tasks:
+  - name: Install vim
+    ignore_errors: yes
+    become: yes
+    package: 
+      state:  latest
+      name:
         - vim
+
+- hosts: localhost
+  connection: local
+  tasks:
+  - name: Install wget
+    ignore_errors: yes
+    become: yes
+    package: 
+      state:  latest
+      name:
         - wget
+
+- hosts: localhost
+  connection: local
+  tasks:
+  - name: Install zoxide
+    ignore_errors: yes
+    become: yes
+    package: 
+      state:  latest
+      name:
         - zoxide
+
+- hosts: localhost
+  connection: local
+  tasks:
+  - name: Install zsh
+    ignore_errors: yes
+    become: yes
+    package: 
+      state:  latest
+      name:
         - zsh
+
+- hosts: localhost
+  connection: local
+  tasks:
+  - name: Install zsh-vi-mode
+    ignore_errors: yes
+    become: yes
+    package: 
+      state:  latest
+      name:
         - zsh-vi-mode
 
   - name: Install zsh-vi-mode
