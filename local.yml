@@ -27,16 +27,6 @@
       changed_when: False
       when: ansible_distribution == "MacOSX"
         
-- hosts: localhost
-  connection: local
-  tasks:
-  - name: Install python
-    ignore_errors: yes
-    become: yes
-    package: 
-      state:  latest
-      name:
-        - python
 
 - hosts: localhost
   connection: local
@@ -48,6 +38,7 @@
       state:  latest
       name:
         - bash
+
 
 - hosts: localhost
   connection: local
@@ -118,6 +109,17 @@
 - hosts: localhost
   connection: local
   tasks:
+  - name: Install entr
+    ignore_errors: yes
+    become: yes
+    package: 
+      state:  latest
+      name:
+        - entr
+
+- hosts: localhost
+  connection: local
+  tasks:
   - name: Install fd
     ignore_errors: yes
     become: yes
@@ -125,6 +127,7 @@
       state:  latest
       name:
         - fd
+
 
 - hosts: localhost
   connection: local
