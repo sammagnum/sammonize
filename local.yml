@@ -10,6 +10,7 @@
       
     - name: pre-run | update package cache (arch)
       tags: always
+      become: yes
       pacman: update_cache=yes
       changed_when: False
       when: ansible_distribution == "Archlinux"
