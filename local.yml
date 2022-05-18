@@ -389,31 +389,31 @@
       dest: $HOME/.opt
     when: ansible_distribution == "Fedora"
         
-  - name: Clone my dotfiles
-    git:
-      repo: git@github.com:sammagnum/.dotfiles.git
-      dest: $HOME/.dotfiles
-      
-  - name: stow my dotfiles
-    stow:
-      state: latest
-      package: '{{ item }}'
-      dir: $HOME/.dotfiles
-    with_items:
-    - nvim
-    - starship
-    - tmux
-    - vim
-    - zsh
+- name: Post Install
+  hosts: localhost
+  become: no
+  vars:
+    the_user: "{{ ansible_user_id }}"
+  tasks:
+    - name: change user shell to zsh 
+      become: yes
+      user:
+        name: "{{ the_user }}"
+        shell: /bin/zsh
+    - name: Clone my dotfiles
+      git:
+        repo: git@github.com:sammagnum/.dotfiles.git
+        dest: $HOME/.dotfiles
+        
+    - name: stow my dotfiles
+      stow:
+        state: latest
+        package: '{{ item }}'
+        dir: $HOME/.dotfiles
+      with_items:
+      - nvim
+      - starship
+      - tmux
+      - vim
+      - zsh
 
-  - name: set up zsh for user
-    hosts: localhost
-    become: no
-    vars:
-      the_user: "{{ ansible_user_id }}"
-    tasks:
-      - name: change user shell to zsh 
-        become: yes
-        user:
-    name: "{{ the_user }}"
-    shell: /bin/zsh
