@@ -32,6 +32,29 @@
 - hosts: localhost
   connection: local
   tasks:
+  - name: Install anki
+    ignore_errors: yes
+    become: no
+    use: yay
+    package: 
+      state:  latest
+      name:
+        - anki
+
+- hosts: localhost
+  connection: local
+  tasks:
+  - name: Install alacritty
+    ignore_errors: yes
+    become: yes
+    package: 
+      state:  latest
+      name:
+        - alacritty
+
+- hosts: localhost
+  connection: local
+  tasks:
   - name: Install bash
     ignore_errors: yes
     become: yes
