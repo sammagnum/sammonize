@@ -29,17 +29,6 @@
       when: ansible_distribution == "MacOSX"
         
 
-- hosts: localhost
-  connection: local
-  tasks:
-  - name: Install anki
-    ignore_errors: yes
-    become: no
-    use: yay
-    package: 
-      state:  latest
-      name:
-        - anki
 
 - hosts: localhost
   connection: local
