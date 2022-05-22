@@ -403,6 +403,7 @@
         
 - name: Post Install
   hosts: localhost
+  tag: postinst
   become: no
   vars:
     the_user: "{{ ansible_user_id }}"
@@ -416,7 +417,6 @@
       git:
         repo: git@github.com:sammagnum/.dotfiles.git
         dest: $HOME/.dotfiles
-        
     - name: stow my dotfiles
       stow:
         state: latest
