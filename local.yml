@@ -407,6 +407,10 @@
   vars:
     the_user: "{{ ansible_user_id }}"
   tasks:
+    - name: Caps -> Ctrl in Xorg
+      become: yes
+      tags: keyboard
+      copy: src=files/xorg-no-caps dest=/etc/X11/xorg.conf.d/00-keyboard.conf mode=644
     - name: change user shell to zsh 
       become: yes
       user:
