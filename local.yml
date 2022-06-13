@@ -400,6 +400,7 @@
       dest: $HOME/.opt
     when: ansible_distribution == "Fedora"
         
+<<<<<<< HEAD
 - name: Post Install
   hosts: localhost
   tags: postinst
@@ -418,7 +419,7 @@
         shell: /bin/zsh
     - name: Clone my dotfiles
       git:
-        repo: git@github.com:sammagnum/.dotfiles.git
+        repo: https://github.com/sammagnum/.dotfiles.git
         dest: $HOME/.dotfiles
     - name: stow my dotfiles
       stow:
@@ -432,3 +433,21 @@
       - vim
       - zsh
 
+=======
+  - name: Clone my dotfiles
+    git:
+      repo: https://github.com/sammagnum/.dotfiles.git
+      dest: $HOME/.dotfiles
+      
+  - name: stow my dotfiles
+    stow:
+      state: latest
+      package: '{{ item }}'
+      dir: $HOME/.dotfiles
+    with_items:
+    - nvim
+    - starship
+    - tmux
+    - vim
+    - zsh
+>>>>>>> fb34043 (changes ssh to https for dotfiles repo)
