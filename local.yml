@@ -34,7 +34,7 @@
   tasks:
   - name: Install alacritty
     ignore_errors: yes
-    become: yes
+    become: no
     package: 
       state:  latest
       name:
@@ -45,7 +45,7 @@
   tasks:
   - name: Install bash
     ignore_errors: yes
-    become: yes
+    become: no
     package: 
       state:  latest
       name:
@@ -57,7 +57,7 @@
   tasks:
   - name: Install bash-completion
     ignore_errors: yes
-    become: yes
+    become: no
     package: 
       state:  latest
       name:
@@ -68,7 +68,7 @@
   tasks:
   - name: Install bat
     ignore_errors: yes
-    become: yes
+    become: no
     package: 
       state:  latest
       name:
@@ -79,7 +79,7 @@
   tasks:
   - name: Install cargo
     ignore_errors: yes
-    become: yes
+    become: no
     package: 
       state:  latest
       name:
@@ -90,7 +90,7 @@
   tasks:
   - name: Install coreutils
     ignore_errors: yes
-    become: yes
+    become: no
     package: 
       state:  latest
       name:
@@ -101,7 +101,7 @@
   tasks:
   - name: Install curl
     ignore_errors: yes
-    become: yes
+    become: no
     package: 
       state:  latest
       name:
@@ -112,7 +112,7 @@
   tasks:
   - name: Install dos2unix
     ignore_errors: yes
-    become: yes
+    become: no
     package: 
       state:  latest
       name:
@@ -123,7 +123,7 @@
   tasks:
   - name: Install entr
     ignore_errors: yes
-    become: yes
+    become: no
     package: 
       state:  latest
       name:
@@ -134,7 +134,7 @@
   tasks:
   - name: Install fd
     ignore_errors: yes
-    become: yes
+    become: no
     package: 
       state:  latest
       name:
@@ -146,7 +146,7 @@
   tasks:
   - name: Install findutils
     ignore_errors: yes
-    become: yes
+    become: no
     package: 
       state:  latest
       name:
@@ -157,7 +157,7 @@
   tasks:
   - name: Install fish
     ignore_errors: yes
-    become: yes
+    become: no
     package: 
       state:  latest
       name:
@@ -168,7 +168,7 @@
   tasks:
   - name: Install fzf
     ignore_errors: yes
-    become: yes
+    become: no
     package: 
       state:  latest
       name:
@@ -179,7 +179,7 @@
   tasks:
   - name: Install gawk
     ignore_errors: yes
-    become: yes
+    become: no
     package: 
       state:  latest
       name:
@@ -190,7 +190,7 @@
   tasks:
   - name: Install gh
     ignore_errors: yes
-    become: yes
+    become: no
     package: 
       state:  latest
       name:
@@ -201,7 +201,7 @@
   tasks:
   - name: Install git
     ignore_errors: yes
-    become: yes
+    become: no
     package: 
       state:  latest
       name:
@@ -212,7 +212,7 @@
   tasks:
   - name: Install jq
     ignore_errors: yes
-    become: yes
+    become: no
     package: 
       state:  latest
       name:
@@ -223,7 +223,7 @@
   tasks:
   - name: Install lsd
     ignore_errors: yes
-    become: yes
+    become: no
     package: 
       state:  latest
       name:
@@ -234,7 +234,7 @@
   tasks:
   - name: Install neofetch
     ignore_errors: yes
-    become: yes
+    become: no
     package: 
       state:  latest
       name:
@@ -245,7 +245,7 @@
   tasks:
   - name: Install neovim
     ignore_errors: yes
-    become: yes
+    become: no
     package: 
       state:  latest
       name:
@@ -256,7 +256,7 @@
   tasks:
   - name: Install nmap
     ignore_errors: yes
-    become: yes
+    become: no
     package: 
       state:  latest
       name:
@@ -267,7 +267,7 @@
   tasks:
   - name: Install rbenv
     ignore_errors: yes
-    become: yes
+    become: no
     package: 
       state:  latest
       name:
@@ -278,7 +278,7 @@
   tasks:
   - name: Install rust
     ignore_errors: yes
-    become: yes
+    become: no
     package: 
       state:  latest
       name:
@@ -289,7 +289,7 @@
   tasks:
   - name: Install init
     ignore_errors: yes
-    become: yes
+    become: no
     package: 
       state:  latest
       name:
@@ -300,7 +300,7 @@
   tasks:
   - name: Install stow
     ignore_errors: yes
-    become: yes
+    become: no
     package: 
       state:  latest
       name:
@@ -311,7 +311,7 @@
   tasks:
   - name: Install telnet
     ignore_errors: yes
-    become: yes
+    become: no
     package: 
       state:  latest
       name:
@@ -322,7 +322,7 @@
   tasks:
   - name: Install tldr
     ignore_errors: yes
-    become: yes
+    become: no
     package: 
       state:  latest
       name:
@@ -333,7 +333,7 @@
   tasks:
   - name: Install tmux
     ignore_errors: yes
-    become: yes
+    become: no
     package: 
       state:  latest
       name:
@@ -344,7 +344,7 @@
   tasks:
   - name: Install vim
     ignore_errors: yes
-    become: yes
+    become: no
     package: 
       state:  latest
       name:
@@ -355,7 +355,7 @@
   tasks:
   - name: Install wget
     ignore_errors: yes
-    become: yes
+    become: no
     package: 
       state:  latest
       name:
@@ -366,7 +366,7 @@
   tasks:
   - name: Install zoxide
     ignore_errors: yes
-    become: yes
+    become: no
     package: 
       state:  latest
       name:
@@ -377,7 +377,7 @@
   tasks:
   - name: Install zsh
     ignore_errors: yes
-    become: yes
+    become: no
     package: 
       state:  latest
       name:
@@ -388,7 +388,7 @@
   tasks:
   - name: Install zsh-vi-mode
     ignore_errors: yes
-    become: yes
+    become: no
     package: 
       state:  latest
       name:
@@ -408,11 +408,11 @@
     the_user: "{{ ansible_user_id }}"
   tasks:
     - name: Caps -> Ctrl in Xorg
-      become: yes
+      become: no
       tags: keyboard
       copy: src=files/xorg-no-caps dest=/etc/X11/xorg.conf.d/00-keyboard.conf mode=644
     - name: change user shell to zsh 
-      become: yes
+      become: no
       user:
         name: "{{ the_user }}"
         shell: /bin/zsh
